@@ -1,0 +1,86 @@
+*{
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding:0 ;
+}
+section{
+    width:100% ;
+    height:93vh ;
+    justify-content: center;
+    text-align: center;
+    padding-bottom:20px ;
+}
+section .logo{
+    width:500x ;
+    height:300px ;
+    display:block;
+    text-align: center;
+
+}
+section h2{
+    background-color: #86780C;
+    width:350px ;
+    height:40px ;
+    font-weight:400;
+    display: inline-block;
+    border-radius:21px ;
+
+}
+.logo img{
+    width:350px ;
+    height:350px ;
+}
+
+form div{
+    margin-top:20px ;
+}
+form div input{
+    background-color:#E5E5E5 ;
+    text-align:center ;
+    border:solid  ;
+    border-radius:25px ;
+    font-size:25px ;
+    color: black;
+    margin-top:20px ;
+}
+form .input1 input{
+    width:410px ;
+    height:50px ;
+    border:solid  ;
+    border-radius:25px ;
+}
+form .input2 input{
+    width:280px ;
+    height:50px ;
+}
+form .input3 input{
+    width:200px ;
+    height:50px ;
+
+}
+
+form .submit{
+    background-color:#0C5178 ;
+    width:160px ;
+    height:40px ;
+    margin-top:20px ;
+    border-radius:18px ;
+    font-size:20px ;
+    
+}
+form .submit:hover{
+    background-color:#E5E5E5 ;
+    border:solid 1px #0C5178 ;
+    color:#0C5178 ;
+}
+.lines{
+    width:100% ;
+    display: flex;
+    justify-content: space-between;
+
+}
+.lines div{
+    width:680px ;
+    border-top:solid 4px white ;
+}

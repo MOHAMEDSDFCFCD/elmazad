@@ -1,0 +1,344 @@
+* {
+    background-color: #000;
+    border: 1px solid rgb(2, 2, 2);
+    color: #ffffff;
+}
+
+header {
+    width: 100%;
+    height: 20vh;
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+header .icon {
+    display: flex;
+    justify-content: space-around;
+}
+
+header .icon a {
+    font-size: 18px;
+    align-items: center;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+header .icon a i:hover {
+    color: #373565;
+}
+
+header .add {
+    width: 60px;
+    font-size: 30px;
+    margin-top: 2px;
+    margin-left: 15px;
+
+}
+
+header .add a {
+    font-size: 34px;
+}
+
+.search {
+    width: 600px;
+    height: 55px;
+    background-color: #e5dede;
+    border: none;
+    border-radius: 34px;
+    padding-left: 15px;
+}
+
+header img {
+    width: 170px;
+    height: 120px;
+}
+
+.titles {
+    width: 100%;
+    height: 10vh;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.titles a {
+    text-decoration: none;
+    font-size: 30px;
+    font-family: sans-serif;
+    border-radius: 30px;
+    text-align: center;
+    background-color: #dad1d1;
+    color: black;
+}
+
+.titles a:hover {
+    background-color: #373565;
+}
+
+.titles .right a {
+    padding: 5px 25px;
+    margin-left: 10px;
+
+}
+
+.titles .left a {
+    padding: 5px 25px;
+    margin-left: 10px;
+
+}
+
+.titles .center a {
+    padding: 10;
+    border-radius: 32px;
+
+}
+
+.icon2 {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin-left: 50px;
+}
+
+.icon2 a {
+    font-size: 38px;
+}
+
+.icon2 .left {
+    display: flex;
+}
+
+.icon2 .left a {
+    margin-left: 20px;
+}
+
+/* القايمة */
+.icon2 .right .bar {
+    margin-left: 60px;
+    font-size: 40px;
+}
+
+.container {
+    height: 30px;
+    width: 80px;
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    right: -10px;
+    width: 400px;
+    height: 350px;
+    text-align: right;
+    background-color: #ffffff;
+    color: #000;
+    margin-bottom: 20px;
+    z-index: 1;
+}
+
+.dropdown a {
+    text-decoration: none;
+    background-color: #373565;
+    display: block;
+    padding: 10px;
+    font-size: 25px;
+    text-align: center;
+}
+
+.dropdown a:hover {
+    background-color: white;
+    color: black;
+}
+
+.container:hover .dropdown {
+    display: block;
+}
+
+/* نهاية القايمة */
+
+.menu {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.menu .row1 {
+    width: 100%;
+    height: 600px;
+    display: flex;
+}
+
+.menu .box1 {
+    width: 450px;
+    height: 600px;
+    color: white;
+    margin-left: 30px;
+
+}
+
+.menu .imgbox {
+    width: 500px;
+    height: 250px;
+    position: relative;
+}
+
+.menu .imgbox img {
+    width: 450px;
+    height: 200px;
+}
+
+
+/* heart btn */
+.menu .imgbox .btns {
+    position: absolute;
+    bottom: 120px;
+    left: 300px;
+    display: flex;
+    background: none;
+    border: none;
+}
+
+.menu .imgbox .btns .btn {
+    background: none;
+    border: none;
+    margin: 87px;
+    outline: none;
+    color: grey;
+    border: white;
+    font-size: 30px;
+
+}
+
+.btn i {
+    color: gray;
+    background: none;
+    border: none;
+}
+
+.btn i:hover {
+    cursor: pointer;
+}
+
+/* 2 */
+.menu .imgbox .btns2 {
+    position: absolute;
+    bottom: 120px;
+    left: 300px;
+    display: flex;
+    background: none;
+    border: none;
+}
+
+.menu .imgbox .btns2 .btn2 {
+    background: none;
+    border: none;
+    margin: 87px;
+    outline: none;
+    color: grey;
+    border: white;
+    font-size: 30px;
+
+}
+
+.btn2 i {
+    color: gray;
+    background: none;
+    border: none;
+}
+
+.btn2 i:hover {
+    cursor: pointer;
+}
+
+/*items*/
+.item1 {
+    background-color: gray;
+    padding: 10px;
+    font-size: 17px;
+    margin-left: 30px;
+    border-radius: 32px;
+    height: 35px;
+}
+
+.item2 {
+    background-color: gray;
+    padding: 10px;
+    font-size: 17px;
+    margin-left: 30px;
+    border-radius: 32px;
+    height: 35px;
+}
+
+.item3 {
+    background-color: gray;
+    padding: 10px;
+    font-size: 17px;
+    margin-left: 30px;
+    border-radius: 32px;
+    height: 35px;
+}
+
+.item4 {
+    background-color: gray;
+    padding: 10px;
+    font-size: 17px;
+    margin-left: 30px;
+    border-radius: 32px;
+    height: 35px;
+}
+
+.item5 {
+    background-color: gray;
+    padding: 10px;
+    font-size: 17px;
+    margin-left: 30px;
+    border-radius: 32px;
+    height: 35px;
+}
+
+.item6 {
+    background-color: gray;
+    padding: 10px;
+    font-size: 17px;
+    margin-left: 30px;
+    border-radius: 32px;
+    height: 35px;
+}
+
+
+.menu .info1 {
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu .price {
+    display: flex;
+    align-items: center;
+}
+
+.menu .info2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.menu .timer {
+    display: flex;
+}
+
+.menu .timer div {
+    margin-left: 10px;
+}
+
+.menu .timer div h2 {
+    background-color: white;
+    color: black;
+    text-align: center;
+}

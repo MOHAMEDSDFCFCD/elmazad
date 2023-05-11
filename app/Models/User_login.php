@@ -9,7 +9,7 @@ class User_login extends Model
 {
     use HasFactory;
     protected $table='login_user';
-    protected $fillable=['id','user_name','pass_word','photo'];
+    protected $fillable=['id','user_name','pass_word','photo','IBAN','my_money'];
     protected $hidden=['created_at','updated_at'];
      public $timestamps=false;
 }

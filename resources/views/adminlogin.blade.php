@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>تسجيل الدخول</title>
+    <link href="{{url('css/copypage/assets/img/logo.jpg')}}" rel="icon"> 
     <style>
       form .submit{
         display:inline-block ;

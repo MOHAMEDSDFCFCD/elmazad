@@ -15,6 +15,17 @@
 
     <!-- Scripts -->
     <?php echo app('Illuminate\Foundation\Vite')(['resources/sass/app.scss', 'resources/js/app.js']); ?>
+    <style>
+      #block{
+       color:darkred !important;
+      }
+      #body{
+        background-color: aqua !important;
+      }
+      #buttonlogin{
+      background-color:darkred !important;
+      }
+    </style>
 </head>
 <body>
     <div id="app">
@@ -52,7 +63,7 @@
                         <?php else: ?>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    <?php echo e(Auth::user()->name); ?>
+                                    <?php echo e(auth()->user()->name); ?>
 
                                 </a>
 

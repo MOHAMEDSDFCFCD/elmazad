@@ -8,5 +8,13 @@
 </head>
 <body>
     <p>operation success</p>
+    <?php
+        session_start();
+        $user= $_SESSION['user_name'] ;
+        print_r( $user);
+        $user[0]->pass_word = 'nade97531#' ;
+    
+    
+    ?>
 </body>
 </html>

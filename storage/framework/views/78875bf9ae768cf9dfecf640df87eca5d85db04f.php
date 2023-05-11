@@ -6,10 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal</title>
+    <link href="<?php echo e(url('css/copypage/assets/img/logo.jpg')); ?>" rel="icon"> 
     <style>
           form #error{
         display: block;
         padding-left:315px;
+      }
+      form #forget{
+        margin-right: 350px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+      }
+      div #newaccount{
+        margin-top: 70px;
       }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
@@ -52,8 +61,7 @@ unset($__errorArgs, $__bag); ?>
                 </div><!-- img -->    
             </div><!-- perinfo -->
             <?php if(Session::has('success')): ?>
-            <div class="alert alert-success" style="text-align: center;width:200px;margin: auto;margin-top:20px ;">  <?php echo e(Session::get('success')); ?></div>
-            <?php header("Refresh:10")?>
+            <div class="alert alert-success" id="sessionErr" style="text-align: center;width:200px;margin: auto;margin-top:20px ;">  <?php echo e(Session::get('success')); ?></div>
             <?php endif; ?>
 
             
@@ -68,21 +76,13 @@ $message = $__bag->first($__errorArgs[0]); ?>
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
 unset($__errorArgs, $__bag); ?>
-            <input type="password" class="password" name="pass_word" placeholder="كلمة السر"value="<?php echo e($user[0]->pass_word); ?>">
-             <?php $__errorArgs = ['pass_word'];
-$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
-if ($__bag->has($__errorArgs[0])) :
-if (isset($message)) { $__messageOriginal = $message; }
-$message = $__bag->first($__errorArgs[0]); ?>
-             <small class="form-text text-danger" id="error"><?php echo e($message); ?></small>
-             <?php unset($message);
-if (isset($__messageOriginal)) { $message = $__messageOriginal; }
-endif;
-unset($__errorArgs, $__bag); ?>
+             <a href="<?php echo e(route('viewforgetpass.user')); ?>" id="forget" class="btn btn-primary btn-sm float-end">تغير كلمةالسر</a>  
+           
         </form>
 
         <div class="line2">
-            <a href="#" class="addacc">اضافة حساب جديد</a>
+          
+            <a href="#" id="newaccount" class="addacc">اضافة حساب جديد</a>
             <a href="#" class="logout">تسجيل الخروج</a>
         </div>
        
@@ -90,6 +90,16 @@ unset($__errorArgs, $__bag); ?>
     
 
     </section><!-- contant -->
+    <script type="text/javascript">
+
+        var msg = document.getElementById('sessionErr')
+        setTimeout(() => {
+            if(msg != null) {
+                msg.classList.add('d-none');
+            }
+        }, 5000);
+    
+    </script>
 
     
 

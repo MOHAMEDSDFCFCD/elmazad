@@ -6,10 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal</title>
+    <link href="{{url('css/copypage/assets/img/logo.jpg')}}" rel="icon"> 
     <style>
           form #error{
         display: block;
         padding-left:315px;
+      }
+      form #forget{
+        margin-right: 350px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+      }
+      div #newaccount{
+        margin-top: 70px;
       }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
@@ -22,7 +31,9 @@
 
 <body>
     <header>
-        <img src="{{url('/images/updateuserprofile/IMG.11.jpg')}}" alt="">
+        
+        <a href="{{route('home.page')}}">
+        <img src="{{url('/images/updateuserprofile/IMG.11.jpg')}}" alt=""></a>
     </header>
 
     <section class="contant">
@@ -45,8 +56,7 @@
                 </div><!-- img -->    
             </div><!-- perinfo -->
             @if(Session::has('success'))
-            <div class="alert alert-success" style="text-align: center;width:200px;margin: auto;margin-top:20px ;">  {{ Session::get('success') }}</div>
-            <?php header("Refresh:10")?>
+            <div class="alert alert-success" id="sessionErr" style="text-align: center;width:200px;margin: auto;margin-top:20px ;">  {{ Session::get('success') }}</div>
             @endif
 
             {{--<input type="text" class="username" placeholder="User Name">--}}
@@ -54,14 +64,13 @@
              @error('user_name')
             <small class="form-text text-danger" id="error">{{$message}}</small>
              @enderror
-            <input type="password" class="password" name="pass_word" placeholder="كلمة السر"value="{{$user[0]->pass_word}}">
-             @error('pass_word')
-             <small class="form-text text-danger" id="error">{{$message}}</small>
-             @enderror
+             <a href="{{route('viewforgetpass.user')}}" id="forget" class="btn btn-primary btn-sm float-end">تغير كلمةالسر</a>  
+           
         </form>
 
         <div class="line2">
-            <a href="#" class="addacc">اضافة حساب جديد</a>
+          
+            <a href="#" id="newaccount" class="addacc">اضافة حساب جديد</a>
             <a href="#" class="logout">تسجيل الخروج</a>
         </div>
        
@@ -69,6 +78,16 @@
     
 
     </section><!-- contant -->
+    <script type="text/javascript">
+
+        var msg = document.getElementById('sessionErr')
+        setTimeout(() => {
+            if(msg != null) {
+                msg.classList.add('d-none');
+            }
+        }, 5000);
+    
+    </script>
 
     
 

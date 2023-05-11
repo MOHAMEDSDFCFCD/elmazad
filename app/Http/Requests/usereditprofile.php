@@ -25,7 +25,6 @@ class usereditprofile extends FormRequest
     {
         return [
             'user_name'=>'required|email|max:100',//unique:login_user,user_name
-            'pass_word'=>'required',
             'photo'=>'max:1000|mimes:png,jpg,jpeg',
             
             //
@@ -35,7 +34,6 @@ class usereditprofile extends FormRequest
     {
         return [
             'user_name.required'=>'username is required',
-            'pass_word.required'=>'password is required',
             'user_name.email'=>'you should email',
            /* 'user_name.unique'=>'you should anthor user_name because it used'*/
         ];
